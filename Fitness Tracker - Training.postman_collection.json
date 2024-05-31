@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "d4544031-6cbb-40f2-a0d3-e2c6004aa4cf",
+		"name": "Fitness Tracker - Training",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35366656"
+	},
+	"item": [
+		{
+			"name": "AddTraining",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"startTime\": \"2024-05-30T06:00:00\",\r\n  \"endTime\": \"2024-05-30T06:30:00\",\r\n  \"activityType\": \"SWIMMING\",\r\n  \"distance\": 2.0,\r\n  \"averageSpeed\": 7.0\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/trainings/addtraining?userId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"trainings",
+						"addtraining"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllTrainings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/trainings/getalltrainings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"trainings",
+						"getalltrainings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTrainingsByUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/trainings/gettrainingsbyuser/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"trainings",
+						"gettrainingsbyuser",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTrainingsAfterDate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/trainings/gettrainingsafterdate?date=2024-05-17T00:00:00.000Z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"trainings",
+						"gettrainingsafterdate"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2024-05-17T00:00:00.000Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTrainingsByActivityType",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/trainings/gettrainingsbyactivitytype?activityType=RUNNING",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"trainings",
+						"gettrainingsbyactivitytype"
+					],
+					"query": [
+						{
+							"key": "activityType",
+							"value": "RUNNING"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateTraining",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"startTime\": \"2024-05-15T06:00:00\",\r\n  \"endTime\": \"2024-05-15T06:30:00\",\r\n  \"activityType\": \"RUNNING\",\r\n  \"distance\": 4.0,\r\n  \"averageSpeed\": 7.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/trainings/updatetraining/3?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"trainings",
+						"updatetraining",
+						"3"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
