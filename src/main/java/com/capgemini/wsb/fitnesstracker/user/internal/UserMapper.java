@@ -11,7 +11,8 @@ class UserMapper {
                            user.getFirstName(),
                            user.getLastName(),
                            user.getBirthdate(),
-                           user.getEmail());
+                           user.getEmail(),
+                           user.getAge());
     }
 
     User toEntity(UserDto userDto) {
@@ -19,7 +20,8 @@ class UserMapper {
                         userDto.firstName(),
                         userDto.lastName(),
                         userDto.birthdate(),
-                        userDto.email());
+                        userDto.email(),
+                        userDto.age());
     }
 
 }
